@@ -5,16 +5,18 @@ public class Manager {
     private Repo repository;
 
     public Manager(Repo repository) {
+
         this.repository = repository;
     }
 
     public void add(Product product) {
+
         repository.add(product);
     }
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
-        for (Product product: repository.findAll()) {
+        for (Product product : repository.findAll()) {
             if (matches(product, text)) {
                 Product[] tmp = new Product[result.length + 1];
                 for (int i = 0; i < result.length; i++) {

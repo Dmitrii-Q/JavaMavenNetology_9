@@ -14,6 +14,7 @@ public class Repo {
     }
 
     public Product[] findAll() {
+
         return goods;
     }
 
@@ -21,7 +22,7 @@ public class Repo {
         Product[] tmp = new Product[goods.length - 1];
         int index = 0;
         for (Product product : goods) {
-            if( product.getID() != removeID ) {
+            if (product.getID() != removeID) {
                 tmp[index] = product;
                 index++;
             }
